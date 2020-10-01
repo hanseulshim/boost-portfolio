@@ -1,55 +1,44 @@
 <template>
   <div>
+    <div class="header">
+      <nuxt-link to="/"><img id="logo" src="~assets/logo.svg" /></nuxt-link>
+      <nuxt-link v-if="$route.path !== '/'" id="home" to="/">Home</nuxt-link>
+    </div>
     <Nuxt />
   </div>
 </template>
 
-<style>
-html {
-  font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
-    Roboto, 'Helvetica Neue', Arial, sans-serif;
-  font-size: 16px;
-  word-spacing: 1px;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  box-sizing: border-box;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
+<style lang="scss">
+body {
   margin: 0;
+  background: #b4b4b4;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
 }
-
-.button--green {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #3b8070;
-  color: #3b8070;
-  text-decoration: none;
-  padding: 10px 30px;
-}
-
-.button--green:hover {
+.header {
+  display: flex;
+  align-items: center;
+  background: #161616;
+  padding: 1em;
   color: #fff;
-  background-color: #3b8070;
-}
+  height: 75px;
 
-.button--grey {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #35495e;
-  color: #35495e;
-  text-decoration: none;
-  padding: 10px 30px;
-  margin-left: 15px;
-}
+  #logo {
+    width: 200px;
+    cursor: pointer;
+  }
 
-.button--grey:hover {
-  color: #fff;
-  background-color: #35495e;
+  #home {
+    margin-left: 5em;
+    font-size: 100%;
+    color: #fff;
+    text-decoration: none;
+    line-height: 4;
+
+    &:hover {
+      color: #ff9a0b;
+    }
+  }
 }
 </style>
