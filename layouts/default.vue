@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="header">
+    <div id="header">
       <nuxt-link to="/"><img id="logo" src="~assets/logo.svg" /></nuxt-link>
       <nuxt-link v-if="$route.path !== '/'" id="home" to="/">Home</nuxt-link>
     </div>
@@ -16,11 +16,11 @@ body {
   font-size: 18px;
   font-weight: 400;
 }
-.header {
+#header {
   display: flex;
   align-items: center;
   background: #161616;
-  padding: 1em;
+  padding: 1em 3em;
   color: #fff;
   height: 75px;
 
@@ -40,5 +40,8 @@ body {
       color: #ff9a0b;
     }
   }
+}
+#main {
+  padding: 3em;
 }
 </style>
