@@ -2,7 +2,10 @@
   <div>
     <div id="header">
       <nuxt-link to="/"><img id="logo" src="~assets/logo.svg" /></nuxt-link>
-      <nuxt-link v-if="$route.path !== '/'" id="home" to="/">Home</nuxt-link>
+      <div v-if="$auth.loggedIn" class="header-row">
+        <nuxt-link v-if="$route.path !== '/'" id="home" to="/">Home</nuxt-link>
+        <button class="link" @click="$auth.logout('google')">sign out</button>
+      </div>
     </div>
     <Nuxt />
   </div>
@@ -24,18 +27,27 @@ body {
   color: #fff;
   height: 75px;
 
+  .header-row {
+    display: flex;
+    // justify-content: space-between;
+    margin-left: 5em;
+    font-size: 100%;
+    line-height: 4;
+    width: 100%;
+
+    .link {
+      margin-left: auto;
+    }
+  }
+
   #logo {
     width: 200px;
     cursor: pointer;
   }
 
   #home {
-    margin-left: 5em;
-    font-size: 100%;
-    color: #fff;
     text-decoration: none;
-    line-height: 4;
-
+    color: #fff;
     &:hover {
       color: #ff9a0b;
     }

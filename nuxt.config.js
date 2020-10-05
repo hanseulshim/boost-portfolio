@@ -1,3 +1,4 @@
+require('dotenv').config()
 export default {
   /*
    ** Nuxt rendering mode
@@ -53,6 +54,7 @@ export default {
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
+    '@nuxtjs/auth',
   ],
   /*
    ** Axios module configuration
@@ -63,5 +65,18 @@ export default {
    ** Build configuration
    ** See https://nuxtjs.org/api/configuration-build/
    */
+  auth: {
+    redirect: {
+      login: '/login',
+      logout: '/login',
+      callback: '/login',
+      home: '/',
+    },
+    strategies: {
+      google: {
+        client_id: process.env.GOOGLE_CLIENT_ID,
+      },
+    },
+  },
   build: {},
 }
