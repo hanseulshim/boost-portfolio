@@ -1,9 +1,8 @@
 <template>
   <div id="container">
-    <img
+    <v-skeleton-loader
       v-if="!iframeLoaded"
-      id="loader"
-      src="https://s3.amazonaws.com/demo.boostlabs/assets/loader.gif"
+      type="card-avatar, article, actions"
     />
     <iframe
       v-show="iframeLoaded"
@@ -39,10 +38,6 @@ export default {
 <style lang="scss">
 #container {
   height: 100vh;
-
-  #loader {
-    width: 100%;
-  }
 
   iframe {
     border: none;
