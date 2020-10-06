@@ -6,6 +6,9 @@
         >Home</nuxt-link
       >
       <v-spacer />
+      <v-avatar v-if="$auth.loggedIn" color="red" size="48" class="mr-4">
+        {{ userInitial }}
+      </v-avatar>
       <v-btn
         v-if="$auth.loggedIn"
         color="secondary"
@@ -20,6 +23,16 @@
     </v-main>
   </v-app>
 </template>
+
+<script>
+export default {
+  computed: {
+    userInitial() {
+      return this.$auth.user.given_name[0] + this.$auth.user.family_name[0]
+    },
+  },
+}
+</script>
 
 <style lang="scss">
 body {
