@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="tile-container">
     <Tile
       v-for="page in pages"
       :key="page.key"
@@ -37,14 +37,28 @@ export default {
       ],
     }
   },
+  head() {
+    return {
+      title: 'Boost Labs Demo',
+      meta: [
+        {
+          hid: 'demo home page',
+          name: 'demo home page',
+          content: 'Boost Labs demo home page',
+        },
+      ],
+    }
+  },
 }
 </script>
 
 <style lang="scss" scoped>
-.container {
-  padding: 3em;
+.tile-container {
+  padding: 3em 6em;
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: 50% 50%;
   grid-gap: 2em;
+  max-width: 1600px;
+  margin: auto;
 }
 </style>

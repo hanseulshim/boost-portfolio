@@ -1,7 +1,14 @@
 <template>
-  <div class="tile">
-    <img class="image" :src="image" />
-    <nuxt-link class="title" :to="`/${slug}`">{{ name }}</nuxt-link>
+  <div>
+    <v-card>
+      <v-img :src="image"></v-img>
+      <v-card-title>{{ name }}</v-card-title>
+      <v-card-actions>
+        <nuxt-link :to="`/${slug}`"
+          ><v-btn color="primary" text>Demo</v-btn></nuxt-link
+        >
+      </v-card-actions>
+    </v-card>
   </div>
 </template>
 

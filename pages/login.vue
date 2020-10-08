@@ -13,6 +13,18 @@
 <script>
 export default {
   middleware: ['loggedIn'],
+  head() {
+    return {
+      title: 'Boost Labs Demo - Login',
+      meta: [
+        {
+          hid: 'demo login page',
+          name: 'demo login page',
+          content: 'Boost Labs demo login page',
+        },
+      ],
+    }
+  },
 }
 </script>
 

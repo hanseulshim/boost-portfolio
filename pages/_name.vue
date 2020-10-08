@@ -32,6 +32,18 @@ export default {
       this.iframeLoaded = true
     },
   },
+  head() {
+    return {
+      title: `Boost Labs Demo - ${this.$route.params.name}`,
+      meta: [
+        {
+          hid: `demo ${this.$route.params.name} page`,
+          name: `demo ${this.$route.params.name} page`,
+          content: `Boost Labs demo ${this.$route.params.name} page`,
+        },
+      ],
+    }
+  },
 }
 </script>
 
