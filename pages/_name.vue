@@ -24,7 +24,7 @@ export default {
   },
   computed: {
     slug() {
-      return `https://s3.amazonaws.com/demo.boostlabs/${this.$route.params.name}/index.html`
+      return `${process.env.baseUrl}/${this.$route.params.name}/index.html`
     },
   },
   methods: {

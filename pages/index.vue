@@ -20,19 +20,19 @@ export default {
           key: 1,
           slug: 'ship',
           name: 'Ship',
-          image: 'https://s3.amazonaws.com/demo.boostlabs/assets/ship.png',
+          image: `${process.env.baseUrl}/assets/ship.png`,
         },
         {
           key: 2,
           slug: 'golem',
           name: 'Golem',
-          image: 'https://s3.amazonaws.com/demo.boostlabs/assets/golem.png',
+          image: `${process.env.baseUrl}/assets/golem.png`,
         },
         {
           key: 3,
           slug: 'home',
           name: 'Home',
-          image: 'https://s3.amazonaws.com/demo.boostlabs/assets/home.png',
+          image: `${process.env.baseUrl}/assets/home.png`,
         },
       ],
     }

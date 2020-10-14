@@ -28,6 +28,9 @@ export default {
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
+  env: {
+    baseUrl: 'https://demo.boostlabs.com',
+  },
   /*
    ** Global CSS
    */
