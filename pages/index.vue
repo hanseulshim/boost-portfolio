@@ -34,6 +34,12 @@ export default {
           name: 'Home',
           image: `${process.env.baseUrl}/assets/home.png`,
         },
+        {
+          key: 4,
+          slug: 'home-report',
+          name: 'Home Report',
+          image: `${process.env.baseUrl}/assets/home-report.png`,
+        },
       ],
     }
   },
