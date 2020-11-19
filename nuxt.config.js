@@ -1,4 +1,3 @@
-import colors from 'vuetify/es5/util/colors'
 require('dotenv').config()
 export default {
   /*
@@ -51,7 +50,6 @@ export default {
   buildModules: [
     // Doc: https://github.com/nuxt-community/eslint-module
     '@nuxtjs/eslint-module',
-    '@nuxtjs/vuetify',
   ],
   /*
    ** Nuxt.js modules
@@ -61,22 +59,6 @@ export default {
     '@nuxtjs/axios',
     '@nuxtjs/auth',
   ],
-  vuetify: {
-    theme: {
-      dark: true,
-      themes: {
-        dark: {
-          primary: colors.orange.darken1,
-          accent: colors.grey.darken3,
-          secondary: colors.amber.darken3,
-          info: colors.teal.lighten1,
-          warning: colors.amber.base,
-          error: colors.deepOrange.accent4,
-          success: colors.green.accent3,
-        },
-      },
-    },
-  },
   /*
    ** Axios module configuration
    ** See https://axios.nuxtjs.org/options
