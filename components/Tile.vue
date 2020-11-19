@@ -1,25 +1,27 @@
 <template>
-  <div>
-    <v-card>
-      <v-img :src="image"></v-img>
-      <v-card-title>{{ name }}</v-card-title>
-      <v-card-actions>
-        <nuxt-link :to="`/${slug}`"
-          ><v-btn color="primary" text>Demo</v-btn></nuxt-link
-        >
-      </v-card-actions>
-    </v-card>
-  </div>
+  <nuxt-link :to="`/${name}`"
+    ><div class="tile" @mouseover="hover = true" @mouseleave="hover = false">
+      <img :src="image" />
+      <div v-if="hover" class="project-tile">
+        <h2 class="title">{{ name }}</h2>
+        <div class="description">{{ description }}</div>
+        <div class="tag-container">
+          <div class="tag type">{{ projectTypes.join(', ') }}</div>
+          <div class="tag tech">{{ techStack.join(', ') }}</div>
+        </div>
+      </div>
+    </div></nuxt-link
+  >
 </template>
 
 <script>
 export default {
   props: {
-    slug: {
+    name: {
       type: String,
       default: 'N/A',
     },
-    name: {
+    description: {
       type: String,
       default: 'N/A',
     },
@@ -27,28 +29,68 @@ export default {
       type: String,
       default: 'N/A',
     },
+    projectTypes: {
+      type: Array,
+      default: () => [],
+    },
+    techStack: {
+      type: Array,
+      default: () => [],
+    },
+  },
+  data() {
+    return {
+      hover: false,
+    }
   },
 }
 </script>
 
 <style lang="scss" scoped>
 .tile {
+  display: inline-block;
   width: 100%;
-  display: flex;
-  flex-direction: column;
+  margin-top: 1em;
+  position: relative;
 
-  .title {
-    width: 100%;
-    font-size: 1.5em;
-    text-align: center;
-    background: #f0efed;
-    padding: 0.25em 0;
-    color: #161616;
-    text-decoration: none;
+  &:hover {
+    cursor: pointer;
   }
 
-  .image {
+  img {
     width: 100%;
+  }
+
+  .project-tile {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background: #000;
+    opacity: 0.75;
+    padding: 2em;
+
+    .title {
+      text-transform: capitalize;
+    }
+
+    .description {
+      margin-top: 1em;
+      height: 25%;
+    }
+    .tag-container {
+      display: flex;
+      justify-content: space-between;
+      .type {
+        text-transform: uppercase;
+      }
+      .tech {
+        text-transform: capitalize;
+      }
+      .tag {
+        width: 48%;
+      }
+    }
   }
 }
 </style>

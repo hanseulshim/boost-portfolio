@@ -1,39 +1,36 @@
 <template>
-  <v-app-bar app :height="115" class="px-5">
+  <div class="header">
     <nuxt-link to="/"><img id="logo" src="~assets/logo.svg" /></nuxt-link>
-    <nuxt-link v-if="$route.path !== '/' && $auth.loggedIn" id="home" to="/"
-      >Home</nuxt-link
-    >
-    <v-spacer />
-    <v-avatar v-if="$auth.loggedIn" color="red" size="48" class="mr-4">
-      {{ userInitial }}
-    </v-avatar>
-    <v-btn
+    <img
       v-if="$auth.loggedIn"
-      color="secondary"
+      id="profile"
+      src="~assets/icon_profile.svg"
       @click="$auth.logout('google')"
-      >sign out</v-btn
-    >
-  </v-app-bar>
+    />
+  </div>
 </template>
 
-<script>
-export default {
-  computed: {
-    userInitial() {
-      return this.$auth.user.given_name[0] + this.$auth.user.family_name[0]
-    },
-  },
-}
-</script>
-
 <style lang="scss">
-#logo {
-  width: 200px;
-  cursor: pointer;
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1em;
+  margin-bottom: 3em;
 }
-
-#home {
-  margin-left: 5em;
+#logo {
+  width: 220px;
+  height: 80.67px;
+  cursor: pointer;
+  &:hover {
+    opacity: 0.75;
+  }
+}
+#profile {
+  width: 40px;
+  cursor: pointer;
+  &:hover {
+    opacity: 0.75;
+  }
 }
 </style>
