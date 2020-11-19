@@ -98,12 +98,6 @@ export default {
           ],
           techStack: ['react', 'amCharts'],
         },
-        {
-          key: 4,
-          slug: 'home-report',
-          name: 'Home Report',
-          image: `${process.env.baseUrl}/assets/home-report.png`,
-        },
       ],
       selectedProjectType: 'all',
       projectTypes: [
