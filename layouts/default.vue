@@ -1,25 +1,28 @@
 <template>
-  <v-app dark>
+  <div>
     <Header />
-    <v-main>
-      <v-container fluid>
-        <Nuxt />
-      </v-container>
-    </v-main>
-  </v-app>
+    <Nuxt />
+  </div>
 </template>
 
 <style lang="scss">
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Helvetica Neue LT Pro', 'Roboto', sans-serif;
   font-weight: 400;
+  background: #161616;
+  color: #fff;
+  font-size: 16px;
+  line-height: 22px;
 }
 
-.v-application a {
-  text-decoration: none;
+h2 {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 67px;
+}
+
+a {
   color: #fff;
-  &:hover {
-    color: #ff9a0b;
-  }
 }
 </style>
