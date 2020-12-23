@@ -1,5 +1,5 @@
 <template>
-  <nuxt-link :to="`/${name}`"
+  <nuxt-link :to="`/${path}`"
     ><div class="tile" @mouseover="hover = true" @mouseleave="hover = false">
       <img :src="image" />
       <div v-if="hover" class="project-tile">
@@ -18,6 +18,10 @@
 export default {
   props: {
     name: {
+      type: String,
+      default: 'N/A',
+    },
+    path: {
       type: String,
       default: 'N/A',
     },

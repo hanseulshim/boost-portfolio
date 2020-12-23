@@ -21,6 +21,7 @@
           v-for="project in filtedProjects.filter((v) => v.key % 2 !== 0)"
           :key="project.key"
           :name="project.name"
+          :path="project.path"
           :description="project.description"
           :image="project.image"
           :project-types="project.projectTypes"
@@ -32,6 +33,7 @@
           v-for="project in filtedProjects.filter((v) => v.key % 2 === 0)"
           :key="project.key"
           :name="project.name"
+          :path="project.path"
           :description="project.description"
           :image="project.image"
           :project-types="project.projectTypes"
@@ -51,6 +53,7 @@ export default {
         {
           key: 1,
           name: 'ship',
+          path: 'ship',
           image: `${process.env.baseUrl}/assets/ship.png`,
           description: 'Ship description needed but this is what it is for now',
           projectTypes: [
@@ -64,6 +67,7 @@ export default {
         {
           key: 2,
           name: 'golem',
+          path: 'golem',
           image: `${process.env.baseUrl}/assets/golem.png`,
           description:
             'Golem description needed but this is what it is for now',
@@ -78,6 +82,7 @@ export default {
         {
           key: 3,
           name: 'home report',
+          path: 'home-report',
           image: `${process.env.baseUrl}/assets/home-report.png`,
           description:
             'Home Report description needed but this is what it is for now',
@@ -90,6 +95,7 @@ export default {
         {
           key: 4,
           name: 'home',
+          path: 'home',
           image: `${process.env.baseUrl}/assets/home.png`,
           description: 'Home description needed but this is what it is for now',
           projectTypes: [
