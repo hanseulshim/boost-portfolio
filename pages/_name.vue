@@ -30,7 +30,7 @@ export default {
     },
   },
   methods: {
-    iframeLoad(e) {
+    iframeLoad() {
       this.iframeLoaded = true
     },
   },

@@ -73,18 +73,23 @@ export default {
     background: #000;
     opacity: 0.75;
     padding: 2em;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
     .title {
       text-transform: capitalize;
     }
 
     .description {
-      margin-top: 1em;
-      height: 25%;
+      margin: 1em 0;
+      flex: 1;
     }
     .tag-container {
       display: flex;
       justify-content: space-between;
+      flex: 1;
       .type {
         text-transform: uppercase;
       }

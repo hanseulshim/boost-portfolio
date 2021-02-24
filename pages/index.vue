@@ -52,10 +52,11 @@ export default {
       projects: [
         {
           key: 1,
-          name: 'ship',
+          name: 'Cruise Ship Visualization Prototype',
           path: 'ship',
           image: `${process.env.baseUrl}/assets/ship.png`,
-          description: 'Ship description needed but this is what it is for now',
+          description:
+            'In this interface, users can log in and see real-time updates to bookings for each cruise, and sailing. In addition, data can be compared with the average bookings, or against peer groups of similar sailings. The pièce de résistance is a 3D rotating ship visualization showing individual staterooms and their booking status. Staff can now see clusters of unsold staterooms and manage pricing and deals across cabin categories, decks, and even target individual staterooms.',
           projectTypes: [
             'data analytics solution',
             'data product development',
@@ -66,11 +67,11 @@ export default {
         },
         {
           key: 2,
-          name: 'golem',
+          name: 'Golem Drill Site Dashboard',
           path: 'golem',
           image: `${process.env.baseUrl}/assets/golem.png`,
           description:
-            'Golem description needed but this is what it is for now',
+            'This interface produces real-time data on drill bits and their journey as they drill down a particular well. The goal is to observe wear & tear insights to optimize when to switch out drill bits, and by doing so maximize cost savings.',
           projectTypes: [
             'data analytics solution',
             'data product development',
@@ -81,11 +82,11 @@ export default {
         },
         {
           key: 3,
-          name: 'home report',
+          name: 'Radian AVM Report',
           path: 'home-report',
           image: `${process.env.baseUrl}/assets/home-report.png`,
           description:
-            'Home Report description needed but this is what it is for now',
+            'Radian looked to produce an automated report that users could generate from selecting a single property. Beyond general info on the selected property, the report would also produce in depth insights, including comparative data based on comparable properties and offer prescriptive feedback.',
           projectTypes: [
             'data product ui/ux design & development',
             'data visualization & reporting',
@@ -94,10 +95,11 @@ export default {
         },
         {
           key: 4,
-          name: 'home',
+          name: 'Radian Market Report',
           path: 'home',
           image: `${process.env.baseUrl}/assets/home.png`,
-          description: 'Home description needed but this is what it is for now',
+          description:
+            'This was an automated report that users could generate by selecting a single property. It would produce in-depth insights with a strong focus on comparative data based on comparable properties.',
           projectTypes: [
             'data product ui/ux design & development',
             'data visualization & reporting',
